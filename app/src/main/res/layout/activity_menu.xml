@@ -61,9 +61,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="@drawable/round_btn_menu_black"
+                android:background="@drawable/round_btn_menu_white"
                 android:text="Pizza"
-                android:textColor="@color/white"
+                android:onClick="onClick"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="79dp"
                 tools:layout_editor_absoluteY="72dp" />
@@ -75,6 +76,7 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/round_btn_menu_white"
                 android:text="Pasta"
+                android:onClick="onClick"
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="79dp"
                 tools:layout_editor_absoluteY="72dp" />
@@ -86,6 +88,7 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/round_btn_menu_white"
                 android:text="Burger"
+                android:onClick="onClick"
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="79dp"
                 tools:layout_editor_absoluteY="72dp" />
@@ -97,6 +100,7 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/round_btn_menu_white"
                 android:text="Sides"
+                android:onClick="onClick"
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="79dp"
                 tools:layout_editor_absoluteY="72dp" />
@@ -108,6 +112,7 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/round_btn_menu_white"
                 android:text="Dessert"
+                android:onClick="onClick"
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="79dp"
                 tools:layout_editor_absoluteY="72dp" />
@@ -119,6 +124,7 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/round_btn_menu_white"
                 android:text="Beverages"
+                android:onClick="onClick"
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="79dp"
                 tools:layout_editor_absoluteY="72dp" />
@@ -129,13 +135,38 @@
         </LinearLayout>
     </HorizontalScrollView>
 
+    <LinearLayout
+        android:id="@+id/veg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/items"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_banner">
+
+        <Switch
+            android:id="@+id/veg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:switchPadding="10dp"
+            android:text="Veg Only"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
     <ListView
         android:id="@+id/items"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menu_banner" />
+        app:layout_constraintTop_toBottomOf="@+id/veg_layout"
+        app:layout_constraintVertical_bias="1.0">
+
+    </ListView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

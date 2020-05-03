@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Intro">
 
+    <!--Background-->
     <ImageView
         android:id="@+id/intro_background"
         android:layout_width="0dp"
@@ -17,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="?attr/selectableItemBackground" />
+        app:srcCompat="?attr/selectableItemBackground"/>
 
     <RelativeLayout
         android:layout_width="0dp"
